@@ -1,6 +1,7 @@
 # OP1 MVP web page
 
 **OnePlus1** is an ad tech company and this is our MVP.
+Brands can create ad campaigns that will be run via rideshare cars and customiza the campaign duration, target market and of course their message
 
 **Project requirements**
 - Written in JavaScript using Node.js, Express.js, and MongoDB
