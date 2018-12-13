@@ -1,4 +1,4 @@
-# OP1 MVP web page
+# custom ad campaign API (OP1 MVP webpage)
 
 **OnePlus1** is an ad tech company and this is our MVP.
 Brands can create ad campaigns that will be run via rideshare cars and customiza the campaign duration, target market and of course their message
