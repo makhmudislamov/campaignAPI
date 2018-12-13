@@ -1,0 +1,34 @@
+
+
+<!-- TITLE -->
+<p>
+    <label for="camp-title">Name of the campaign</label><br>
+    <input id="camp-title" type="text" name="camp_title" value="{{campaign.camp_title}}" />
+</p>
+<p>
+    <label for="camp-duration">Campaign Duration</label><br>
+    {{!-- <input id="camp-duration" type="text" name="camp_duration" value="{{this.camp_duration}}" /> --}}
+    <select id="camp-duration" type="number" name="camp_duration" value="{{campaign.camp_duration}}">
+        <option name="camp_duration" value="30 days">30 days</option>
+        <option name="camp_duration" value="60 days">60 days</option>
+        <option name="camp_duration" value="90 days">90 days</option>
+    </select>
+</p>
+<p>
+    <label for="car-numb">Number of Cars for your campaign:</label><br>
+    {{!-- <input id="camp-numb" type="text" name="car_numb" value="{{this.car_numb}}" /> --}}
+    <select id="car-numb" type="number" name="car_numb" value="{{campaign.car_numb}}">
+        <option value="30 cars">30 cars</option>
+        <option value="60 cars">60 cars</option>
+        <option value="90 cars">90 cars</option>
+    </select>
+</p>
+<p>
+    <label for="camp-target">Who is your target market?</label><br>
+    <textarea id="camp-target" type="text" name="camp_target" rows="5">{{campaign.camp_target}}</textarea>
+</p>
+<p>
+    <label for="camp-message">What is the message of this campaign?</label><br>
+    <textarea id="camp-message" type="text" name="camp_message" rows="10">{{campaign.camp_message}}</textarea>
+</p>
+

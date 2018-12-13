@@ -1,0 +1,36 @@
+<html>
+
+    <head>
+
+    </head>
+   <body>
+    
+    
+    
+    <h1>Campaigns</h1>
+    {{!-- <a href="/campaigns/new">New Campaign</a> --}}
+    
+    {{#each campaign}}
+    <h2><a href="/campaigns/{{this._id}}">Campaign: {{this.camp_title}}</a></h2>
+    <small><span>Campaign Duration:</span> {{this.camp_duration}}</small> <br>
+    <small><span>Number of Cars:</span> {{this.car_numb}}</small><br>
+    <small><span>Who is your target market:</span> {{this.camp_target}}</small><br>
+    <small><span>What is your campaign message:</span> {{this.camp_message}}</small><br>
+    {{/each}}
+
+
+   </body>
+    
+    <style>
+        
+        span {
+            font-weight: bold;
+            color: blue;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+
+</html>

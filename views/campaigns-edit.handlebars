@@ -1,0 +1,15 @@
+<form method="POST" action="/campaigns/{{campaign._id}}?_method=PUT">
+    <fieldset>
+        <legend>Edit Campaign</legend>
+        {{> campaigns-form}}
+    </fieldset>
+
+    <!-- BUTTON -->
+    <p>
+        <button type="submit">Submit Edits</button>
+    </p>
+    <p>
+        <a href="/campaings"><button type="submit">Cancel Edits</button></a>
+    </p>
+
+</form>

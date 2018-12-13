@@ -1,0 +1,25 @@
+
+<a href="/">Back to Home</a> <br>
+<a href="/campaigns">Back to Campaigns</a>
+
+<h2>Campaign Name: {{campaign.camp_title}}</h2>
+<small><span>Campaign Duration:</span> {{campaign.camp_duration}}</small> <br>
+<small><span>Number of Cars:</span> {{campaign.car_numb}}</small><br>
+<small><span>Who is your target market:</span> {{campaign.camp_target}}</small><br>
+<small><span>What is your campaign message:</span> {{campaign.camp_message}}</small><br>
+
+<p><a href="/campaigns/{{campaign._id}}/edit"><button>Edit</button></a></p>
+
+<!-- Delete button -->
+<p>
+    <form method="POST" action="/campaigns/{{campaign._id}}?_method=DELETE">
+        <button type="submit">Delete</button>
+    </form>
+</p>
+
+<style>
+    span {
+        font-weight: bold;
+        color: blue;
+    }
+</style>
