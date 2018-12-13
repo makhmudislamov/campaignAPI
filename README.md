@@ -9,9 +9,6 @@ Brands can create ad campaigns that will be run via rideshare cars and customiza
 - CRUD >= 1 Resource
 - A conventional UI using Bootstrap 4
 
-
-Checkout the live app here: https://campaign-api-ms.herokuapp.com/
-
 ## User Stories
 * [X] Users can view all campaigns (index)
 * [X] Users can create a campaign (new/create)
@@ -20,3 +17,7 @@ Checkout the live app here: https://campaign-api-ms.herokuapp.com/
 * [X] Users can edit a campaign (edit/update)
 * [X] Users can see drivers' page
 * [X] Users can see customers' page
+
+Documantation: https://makhmudislamov.github.io/campaignAPI/#/
+
+Checkout the live app here: https://campaign-api-ms.herokuapp.com/
