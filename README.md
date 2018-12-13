@@ -18,6 +18,11 @@ Brands can create ad campaigns that will be run via rideshare cars and customiza
 * [X] Users can see drivers' page
 * [X] Users can see customers' page
 
+## WIP
+* [X] Authentication (Brands)
+* [X] CRUD >> Drivers
+* [X] Better Documentation (docsify)
+
 Documantation: https://makhmudislamov.github.io/campaignAPI/#/
 
 Checkout the live app here: https://campaign-api-ms.herokuapp.com/
