@@ -18,7 +18,7 @@ Brands can create ad campaigns that will be run via rideshare cars and customiza
 * [X] Users can see drivers' page
 * [X] Users can see customers' page
 
-## WIP
+## Future features
 * [X] Authentication (Brands)
 * [X] CRUD >> Drivers
 * [X] Better Documentation (docsify)
@@ -28,6 +28,6 @@ Documantation: https://makhmudislamov.github.io/campaignAPI/#/
 Checkout the live app here: https://newads-ms.herokuapp.com/
 
 ## Run locally
-1. git clone git@github.com:makhmudislamov/campaignAPI.git
-2. install dependencies
-3. nodemon app.js
+1. Clone this repo: `git clone git@github.com:makhmudislamov/campaignAPI.git`
+2. Install dependencies
+3. Run `nodemon app.js`
