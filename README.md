@@ -25,4 +25,9 @@ Brands can create ad campaigns that will be run via rideshare cars and customiza
 
 Documantation: https://makhmudislamov.github.io/campaignAPI/#/
 
-Checkout the live app here: https://campaign-api-ms.herokuapp.com/
+Checkout the live app here: https://newads-ms.herokuapp.com/
+
+## Run locally
+1. git clone git@github.com:makhmudislamov/campaignAPI.git
+2. install dependencies
+3. nodemon app.js
