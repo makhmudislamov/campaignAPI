@@ -15,7 +15,7 @@ var exphbs = require('express-handlebars');
 app.use(methodOverride('_method'))
 app.use(express.static('public'));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/OP1-webpage', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://mongo/OP1-webpage', { useNewUrlParser: true });
 
 const port = process.env.PORT || 3000;
 app.listen(port);
