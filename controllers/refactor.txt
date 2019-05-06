@@ -1,0 +1,15 @@
+Refactor campaigns routes:
+
+1. Add more comments
+2. change arrow functions to async/await when it is possible
+
+Refactor campaigns-test:
+
+1. check which route tests are not passing.
+2. modify the tests 
+3. add more comments
+4. check if all route tests pass
+
+Refactor the project:
+
+1. Dockerize whole Campaign API project
