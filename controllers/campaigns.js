@@ -4,7 +4,12 @@ module.exports = function(app) {
 
 
     // INDEX CAMPAIGN
-    app.get('/campaigns', (req, res) => {
+    app.get('/campaigns', async (req, res) => {
+        // await campaign = Campaign.find()
+        // res.render('campaigns-index', { campaign })
+        //     .catchcatch(err => {
+        //         console.log(err);
+        //     })
         Campaign.find()
             .then(campaign => {
                 res.render('campaigns-index', { campaign: campaign });

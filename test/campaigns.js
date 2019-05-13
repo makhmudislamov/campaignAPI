@@ -42,25 +42,25 @@ describe('Campaigns', () => {
             .end((err, res) => {
                 res.should.have.status(200);
                 res.should.be.html
-                done();
+            done();
             });
     });
 
     // TEST CREATE
     it('should create a SINGLE campaign on /campaigns POST', (done) => {
         chai.request(server)
-            .post('/campaigns')
+            .post(`/campaigns`)
             .send(sampleCampaign)
             .end((err, res) => {
                 res.should.have.status(200);
                 res.should.be.html
-                done();
+                .then(done);
             });
     });
 
     // TEST SHOW
-    it('should show a SINGLE review on /campaigns/<id> GET', (done) => {
-        var campaign = new Campaign(sampleCampaign);
+    it('should show a SINGLE campaign on /campaigns/<id> GET', (done) => {
+        let campaign = new Campaign(sampleCampaign);
         campaign.save((err, data) => {
             chai.request(server)
                 .get(`/campaigns/${data._id}`)
