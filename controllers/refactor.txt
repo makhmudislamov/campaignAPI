@@ -1,10 +1,18 @@
 Refactor campaigns routes:
 
 1. create new branch -DONE
+    - create a branch named AJAX since its the main goal of the refactor
 2. Add more comments -DONE
+    - add comments of what new changes are doing, comment out and keep old functions
 3. add AJAX -DONE
+    - add public/javascript/scripts.js 
+    - try to return JSON for post
+    - then render your JSON insted of old method - HTML
 4. add Axios-DONE
+     - add necessary APIs to main.handlebars inside <body>
 
 Refactor the project:
 
 1. Dockerize whole Campaign API project - DONE
+    - add Dockerfile with instructions
+    - add docker-compose.yml 
