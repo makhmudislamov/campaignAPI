@@ -20,9 +20,20 @@ module.exports = function(app) {
     })
 
     // SHOW
+    // app.get('/campaigns/:id', (req, res) => {
+    //     Campaign.findById(req.params.id).then((campaign) => {
+    //         res.render('campaigns-show', { campaign: campaign })
+    //     }).catch((err) => {
+    //         console.log(err.message);
+    //     })
+    // })
+    // SHOW
     app.get('/campaigns/:id', (req, res) => {
-        Campaign.findById(req.params.id).then((campaign) => {
-            res.render('campaigns-show', { campaign: campaign })
+        Campaign.find({ campaignId: req.params.id}).then((campaign) => {
+            campaigns.reverse();
+            // respond with the template with both values
+            res.render('campaigns-show', { campaigns: campaigns })
+
         }).catch((err) => {
             console.log(err.message);
         })
