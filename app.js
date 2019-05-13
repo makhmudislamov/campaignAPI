@@ -11,9 +11,8 @@ const customers = require('./controllers/customers');
 app.use(bodyParser.urlencoded({ extended: true }));
 var exphbs = require('express-handlebars');
 
-// override with POST having ?_method=DELETE or ?_method=PUT
-app.use(methodOverride('_method'))
-app.use(express.static('public'));
+
+// app.use(express.static('public'));
 // <<<<<<<Adding ajax - SPD 1.4 refactor >>>>>>>>
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -23,6 +22,8 @@ app.use(bodyParser.json());
 // This tells your `Express.js` app to serve all client-side assets in its `public` folder, so that is where we'll put our JavaScript scripts.
 app.use(express.static('public'));
 // <<<<<<<>>>>>>>>
+// override with POST having ?_method=DELETE or ?_method=PUT
+app.use(methodOverride('_method'))
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://mongo/OP1-webpage', { useNewUrlParser: true });
 
 const port = process.env.PORT || 3000;
