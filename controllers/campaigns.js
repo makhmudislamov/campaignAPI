@@ -4,12 +4,7 @@ module.exports = function(app) {
 
 
     // INDEX CAMPAIGN
-    app.get('/campaigns', async (req, res) => {
-        // await campaign = Campaign.find()
-        // res.render('campaigns-index', { campaign })
-        //     .catchcatch(err => {
-        //         console.log(err);
-        //     })
+    app.get('/campaigns', (req, res) => {
         Campaign.find()
             .then(campaign => {
                 res.render('campaigns-index', { campaign: campaign });
@@ -35,12 +30,21 @@ module.exports = function(app) {
 
 
     // CREATE
+    // app.post('/campaigns', (req, res) => {
+    //     Campaign.create(req.body).then((campaign) => {
+    //         console.log(campaign)
+    //         res.redirect(`/campaigns/${campaign._id}`)
+    //     }).catch((err) => {
+    //         console.log(err.message)
+    //     })
+    // })
+    // CREATE 
     app.post('/campaigns', (req, res) => {
         Campaign.create(req.body).then((campaign) => {
-            console.log(campaign)
-            res.redirect(`/campaigns/${campaign._id}`)
+            // returning JSON
+            res.status(200).send({ campaign: campaign})
         }).catch((err) => {
-            console.log(err.message)
+            res.status(400).send({ err: err })
         })
     })
 

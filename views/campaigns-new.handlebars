@@ -4,6 +4,11 @@
        <fieldset>
             <legend>New Campaign</legend>
             {{> campaigns-form}}
+            <div id="campaigns">
+                {{#each campaigns}}
+                {{> campaign campaign=this campaignId=../campaignId}}
+                {{/each}}
+            </div>
        </fieldset>
 
     <!-- BUTTON -->

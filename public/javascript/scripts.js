@@ -40,3 +40,30 @@ if (document.getElementById('new-campaign')) {
             });
     });
 }
+
+// We'll need this for re-constructing our delete form
+const campaignId = campaign._id;
+axios.post('/campaigns', campaign)
+    .then(function (response) {
+        // wait for the success response from the server
+        console.log("response: ", response);
+        // remove the information from the form
+        document.getElementById('new-campaign').reset();
+        // display the data as a new comment on the page
+        document.getElementById('campaigns').insertAdjacentHTML('afterbegin',
+            `<div class="card">
+        <div class="card-block">
+            <h4 class="card-title">${response.data.campaign.camp_title}</h4>
+            <p class="card-text">${response.data.campaign.camp_duration}</p>
+            <p class="card-text">${response.data.campaign.camp_numb}</p>
+            <p class="card-text">${response.data.campaign.camp_target}</p>
+            <p class="card-text">${response.data.campaign.camp_message}</p>
+            <p>
+                <form method="POST" action="/campaigns/${response.data.campaign.campaignId}?_method=DELETE">
+                    <button class="btn btn-link" type="submit">Delete</button>
+                </form>
+            </p>
+        </div>
+    </div>`
+        );
+    })
